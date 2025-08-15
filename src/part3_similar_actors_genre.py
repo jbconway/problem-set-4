@@ -94,4 +94,4 @@ def sag():
     print("\nTop 10 actors by Euclidean distance:")
     for idx, row in top_10_euclid.iterrows():
         print(f"{row['actor_id']} {row['name']} (Euclidean distance: {row['euclidean_distance']:.3f})")
-    print("\nThe ranking changes when using Euclidean distance because it looks at the overall difference in the number of movies actors have done in each genre, not just the pattern. So actors who act a lot in similar genres but at different frequencies may move up or down compared to the cosine distance ranking.")
+    print("\nThe ranking changes when using Euclidean distance because it considers the total number of movies an actor has done in each genre. For example, two actors might act in the same genres (high cosine similarity) but one has acted in many more movies overall. Euclidean distance captures that difference in magnitude, so actors who have similar patterns but different totals may shift up or down in the ranking compared to cosine distance.")
