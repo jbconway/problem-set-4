@@ -13,6 +13,12 @@ import json
 
 def etl():
     """
+    Downloads the IMDb movies dataset (2000–2022), saves it as JSON 
+    and CSV in '/data' for further analysis.
+
+    Outputs:
+        - /data/imdb_movies_2000to2022.prolific.json
+        - /data/imdb_movies_2000to2022.csv
     """
     # Create '/data' directory if it doesn't exist
     data_dir = os.path.join(os.path.dirname(__file__), '..', 'data')

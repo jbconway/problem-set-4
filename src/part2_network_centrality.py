@@ -17,6 +17,8 @@ from datetime import datetime
 
 def nc():
     """
+    Builds a graph of actors from the IMDb dataset, calculates degree centrality,
+    prints the top 10 most central actors, and saves the actor edge list to CSV.
     """
     data_dir = os.path.join(os.path.dirname(__file__), '..', 'data')
     os.makedirs(data_dir, exist_ok=True)
